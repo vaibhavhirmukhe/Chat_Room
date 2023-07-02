@@ -25,7 +25,7 @@ const SideBar = ({ logout })=>(
 
 const CompanyHeader = () =>(
     <div className="channel-list__header">
-        <p className="channel-list__header__text">VIIT Query Raiser</p>
+        <p className="channel-list__header__text">ViChat Room</p>
     </div>
 );
 
@@ -59,7 +59,7 @@ const ChannelListContent = ({ isCreating, setIsCreating, setCreateType, setIsEdi
         <SideBar logout = {logout}/>
         <div className='channel-list__list__wrapper'>
             <CompanyHeader/>
-            <ChannelSearch/>
+            <ChannelSearch setToggleContainer={setToggleContainer}/>
             <ChannelList
                 filters={filters}
                 channelRenderFilterFn={customChannelTeamFilter}

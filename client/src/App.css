@@ -145,6 +145,7 @@
   .channel_preview__item{
     color: white;
     margin-left: 10px;
+    margin-top: 10px;
   }
   .auth__form-container_fields-account p {
     font-size: 14px;
@@ -446,6 +447,7 @@
     font-size: 18px;
     line-height: 28px;
     color: #ffffff;
+    margin-top: 10px;
   }
   
   .channel-search__container {
@@ -910,6 +912,7 @@
   .team-channel-header__name.user {
     font-weight: 500;
     font-size: 14px;
+    margin-top: 10px;
   }
   
   .team-channel-header__right {
@@ -1022,6 +1025,9 @@
     width: 100%;
     text-overflow: ellipsis;
     word-break: break-all;
+  }
+  .channel-preview__item p{
+    margin-top: 10px;
   }
   
   .channel-preview__item.multi {

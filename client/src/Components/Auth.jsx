@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Cookies from 'universal-cookie';
 import axios from 'axios';
 
+import { Alerts } from './';
+
 const cookies = new Cookies();
 
 const initialState = {
@@ -16,6 +18,17 @@ const initialState = {
 const Auth = () => {
     const [form, setForm] = useState(initialState);
     const [isSignup, setIsSignup] = useState(false);
+
+    const [alert, setAlert] = useState(null);
+
+    const showAlert=(message)=>{
+      setAlert({
+        msg:message,
+      })
+      setTimeout(() => {
+        setAlert(null);
+      }, 1500);
+    }
 
     const switchMode = () =>{
         setIsSignup((prevIsSignup) => !prevIsSignup);
@@ -36,8 +49,9 @@ const Auth = () => {
         const { data : { token, userId, hashedPassword, fullName}} = await axios.post(`${URL}/${isSignup ? 'signup' : 'login'}`, {
             fullName: form.fullName, username, email, password, phoneNumber, avatarURL,
         }).catch((error) => {
-            console.log(error.response);
-            window.alert(error.response.data.message);
+            // console.log(error.response);
+            // window.alert(error.response.data.message);
+            showAlert(error.response.data.message);
           });
 
         cookies.set('token', token);
@@ -56,6 +70,9 @@ const Auth = () => {
     }
 
   return (
+    <>
+
+    <Alerts alert={alert}/>
     <div className='auth__form-container'>
         <div className="auth__form-container_fields">
             <div className="auth__form-container_fields-content">
@@ -159,6 +176,7 @@ const Auth = () => {
             <img src="https://www.targetfirst.com/wp-content/uploads/2021/03/clictochat-e1620817319308.png" alt="Sign In" />
         </div>
     </div>
+    </>
   )
 }
 
