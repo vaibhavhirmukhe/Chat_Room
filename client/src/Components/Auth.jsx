@@ -44,7 +44,7 @@ const Auth = () => {
 
         const { username, email, password, phoneNumber, avatarURL} = form;
 
-        const URL = 'http://localhost:5000/auth';
+        const URL = 'https://vichat-room.onrender.com/auth';
         
         const { data : { token, userId, hashedPassword, fullName}} = await axios.post(`${URL}/${isSignup ? 'signup' : 'login'}`, {
             fullName: form.fullName, username, email, password, phoneNumber, avatarURL,
