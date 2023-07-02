@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { AddChannel } from '../assets';
 // import { useChannelStateContext, useChatContext } from 'stream-chat-react';
 
