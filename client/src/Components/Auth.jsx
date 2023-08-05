@@ -15,6 +15,7 @@ const initialState = {
     phoneNumber : '',
     avatarURL: '', 
 }
+
 const Auth = () => {
     const [form, setForm] = useState(initialState);
     const [isSignup, setIsSignup] = useState(false);

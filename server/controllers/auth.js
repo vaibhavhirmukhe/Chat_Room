@@ -1,13 +1,13 @@
-const {connect} = require('getstream');
+const { connect } = require('getstream');
 const bcrypt = require('bcrypt');
 const StreamChat = require('stream-chat').StreamChat;
 const crypto = require('crypto');
 
 require('dotenv').config();
 
-const api_key = "sr24ngdadv8g";
-const api_secret = "mkz8tbuwhh9895k7bevccdtsm6cgeazqy9fgre6j746yvjz3575dzsjzdd8s8mgq";
-const app_id = 1255909;
+const api_key = "vt7mwet9zvus";
+const api_secret = "ck4h26qc8vdvhckgrjuvv5sqgwpt4pxntq2x3gtmghquzqxqj47ak6qthkfr4bgr";
+const app_id = 1260285;
 
 const signup = async(req, res) => {
     try {
