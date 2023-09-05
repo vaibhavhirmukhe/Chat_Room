@@ -5,9 +5,9 @@ const crypto = require('crypto');
 
 require('dotenv').config();
 
-const api_key = "vt7mwet9zvus";
-const api_secret = "ck4h26qc8vdvhckgrjuvv5sqgwpt4pxntq2x3gtmghquzqxqj47ak6qthkfr4bgr";
-const app_id = 1260285;
+const api_key = "cxvdhtg4w9ca";
+const api_secret = "gwhnkh2hvahjf5wgyncs3sx72fmr3qv2wz52pxmkdcyz8h262ykq6w9um7d6jrre";
+const app_id = 1247590;
 
 const signup = async(req, res) => {
     try {
